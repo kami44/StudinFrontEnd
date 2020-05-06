@@ -104,12 +104,25 @@ module.exports = __webpack_require__.p + "index.htm";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function greeter(person) {
+/*interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+function greeter(person: Person): string {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
-var user = { firstName: "John", lastName: "Doe" };
-var element = document.getElementById("content");
-element.innerHTML = greeter(user);
+let user: Person = { firstName: "John", lastName: "Doe" };
+
+let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
+element.innerHTML = greeter(user);*/
+new Vue({
+    el: "#wrapper",
+    data: {
+        miav: "lol",
+    },
+    methods: {}
+});
 
 
 /***/ }),

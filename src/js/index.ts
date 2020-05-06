@@ -1,4 +1,4 @@
-interface Person {
+/*interface Person {
     firstName: string;
     lastName: string;
 }
@@ -9,4 +9,14 @@ function greeter(person: Person): string {
 let user: Person = { firstName: "John", lastName: "Doe" };
 
 let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
+element.innerHTML = greeter(user);*/
+ new Vue({
+     el: "#wrapper",
+     data:{
+         miav:"lol",
+
+     },
+     methods:{
+
+     }
+ })
