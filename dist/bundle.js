@@ -104,12 +104,19 @@ module.exports = __webpack_require__.p + "index.htm";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function greeter(person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-var user = { firstName: "John", lastName: "Doe" };
-var element = document.getElementById("content");
-element.innerHTML = greeter(user);
+new Vue({
+    el: "#wrapper",
+    data: {
+        students: [
+            { firstName: "Miav", lastName: "Mogens", attendancy: true },
+            { firstName: "Bølle", lastName: "Bob", attendancy: true },
+            { firstName: "Kalkun", lastName: "Harry", attendancy: true },
+            { firstName: "Niklas", lastName: "Den Store", attendancy: false },
+            { firstName: "Bianco", lastName: "Bjerg", attendancy: true },
+        ],
+    },
+    methods: {}
+});
 
 
 /***/ }),
