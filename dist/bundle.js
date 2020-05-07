@@ -104,6 +104,7 @@ module.exports = __webpack_require__.p + "index.htm";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+var buttonwrap = document.getElementById("buttonwrap");
 new Vue({
     el: "#wrapper",
     data: {
@@ -117,12 +118,17 @@ new Vue({
     },
     methods: {
         ChangeAttendancy: function (student) {
+            var _this = this;
             this.students.forEach(function (stud) {
                 if (stud.id == student.id) {
-                    if (student.attendancy)
+                    if (student.attendancy) {
                         stud.attendancy = false;
-                    else
+                        _this.buttontoggle(thisfield, false);
+                    }
+                    else {
                         stud.attendancy = true;
+                        _this.buttontoggle(thisfield, true);
+                    }
                 }
             });
         }

@@ -16,6 +16,7 @@ interface IStudent{
     lastName: string;
     attendancy: boolean;
 }
+let buttonwrap: HTMLDivElement = <HTMLDivElement> document.getElementById("buttonwrap");
 
 new Vue({
     el: "#wrapper",
@@ -33,13 +34,16 @@ new Vue({
             
                 this.students.forEach(stud => {
                     if(stud.id==student.id){
-                        if (student.attendancy)stud.attendancy = false;
-                        else stud.attendancy = true;
-                        
+                        if (student.attendancy){
+                            stud.attendancy = false;
+                            this.buttontoggle(thisfield, false);
+                        } else {
+                            stud.attendancy = true;
+                            this.buttontoggle(thisfield, true);
+                        }    
                     }    
                 });
             
         }
-
     }
 })
