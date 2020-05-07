@@ -11,11 +11,17 @@
     width: 100%;
 }
 
+#fagheading {
+    margin-bottom: 20px;
+    height: 4.5rem;
+    font-size: 7vmin;
+}
 
 .attend {
     Color: #155724;
     background: #c3e6cb;
 }
-.buttonwrap{
-    float:right;
+
+.buttonwrap {
+    float: right;
 }

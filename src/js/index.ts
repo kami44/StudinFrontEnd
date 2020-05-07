@@ -21,25 +21,37 @@ let buttonwrap: HTMLDivElement = <HTMLDivElement> document.getElementById("butto
 new Vue({
     el: "#wrapper",
     data:{
-        students: [
-            {id:1, firstName:"Miav", lastName:"Mogens",attendancy:true},
-            {id:2, firstName:"Bølle", lastName:"Bob",attendancy:true},
-            {id:3, firstName:"Kalkun", lastName:"Harry",attendancy:true},
-            {id:4, firstName:"Niklas", lastName:"Den Store",attendancy:false},
-            {id:5, firstName:"Bianco", lastName:"Bjerg",attendancy:true},
-        ],
+        userTeacher: {
+            courses: [
+                {id:1, name:"Programmering 3. semester"},
+                {id:2, name:"Programmering 2. semester"},
+                {id:3, name:"Technology"},
+
+            ],
+            firstName: "LORTeLars",
+            lastName: "Shitbag",
+            currentCourse: {
+                id:1,
+                name:"Programmering 3. semester",
+                students: [
+                    {id:1, firstName:"Miav", lastName:"Mogens",attendancy:true},
+                    {id:2, firstName:"Bølle", lastName:"Bob",attendancy:true},
+                    {id:3, firstName:"Kalkun", lastName:"Harry",attendancy:true},
+                    {id:4, firstName:"Niklas", lastName:"Den Store",attendancy:false},
+                    {id:5, firstName:"Bianco", lastName:"Bjerg",attendancy:true},
+                ]
+            }
+        }
     },
     methods:{
         ChangeAttendancy:function(student){
             
-                this.students.forEach(stud => {
+                this.userTeacher.currentCourse.students.forEach(stud => {
                     if(stud.id==student.id){
                         if (student.attendancy){
                             stud.attendancy = false;
-                            this.buttontoggle(thisfield, false);
                         } else {
                             stud.attendancy = true;
-                            this.buttontoggle(thisfield, true);
                         }    
                     }    
                 });
