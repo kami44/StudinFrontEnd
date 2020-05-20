@@ -15,6 +15,7 @@
     margin-bottom: 20px;
     height: 4.5rem;
     font-size: 7vmin;
+    display:inline;
 }
 
 .attend {
@@ -24,4 +25,7 @@
 
 .buttonwrap {
     float: right;
+}
+.row{
+    margin-bottom:20px;
 }
