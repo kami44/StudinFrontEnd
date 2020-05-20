@@ -2144,6 +2144,7 @@ new Vue({
                 lessonStart: "",
                 lessonEnd: "",
                 courseName: "",
+                classRoomName: "",
                 students: []
             }
         },
